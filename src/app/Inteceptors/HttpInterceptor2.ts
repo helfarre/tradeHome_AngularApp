@@ -10,7 +10,7 @@ import {
 } from '@angular/common/http';
 import { map, catchError, finalize, switchMap, filter, take } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { AuthService } from '../Services/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Injectable()
 export class HTTPListener implements HttpInterceptor {

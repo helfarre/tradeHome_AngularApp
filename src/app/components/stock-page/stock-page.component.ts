@@ -6,7 +6,7 @@ import { DatageneratorService } from 'src/app/services/datagenerator.service';
 import { Location } from '@angular/common';
 import { PredictionService } from 'src/app/services/prediction.service';
 import { predictions } from 'src/app/models/Predictions.Model';
-import { AuthService } from 'src/app/Services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-stock-page',

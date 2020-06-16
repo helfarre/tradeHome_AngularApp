@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DashboardService } from 'src/app/services/dashboard.service';
 import { Purchase } from 'src/app/models/Purchase.Model';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/Services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-purchase',

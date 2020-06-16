@@ -4,7 +4,7 @@ import { Stock } from 'src/app/models/Operation.Model';
 import { DatageneratorService } from 'src/app/services/datagenerator.service';
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
-import { AuthService } from 'src/app/Services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 

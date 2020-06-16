@@ -5,7 +5,7 @@ import { DatageneratorService } from 'src/app/services/datagenerator.service';
 import { Stock } from 'src/app/models/Operation.Model';
 import { predictions } from 'src/app/models/Predictions.Model';
 import { PredictionService } from 'src/app/services/prediction.service';
-import { AuthService } from 'src/app/Services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-stock-sell-page',
