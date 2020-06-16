@@ -1,0 +1,8 @@
+button{
+    background-color: rosybrown;
+    color : white;
+    margin: 10px;
+}
+div{
+    display: inline-flex;   
+}

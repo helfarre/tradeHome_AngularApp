@@ -1,0 +1,59 @@
+<div class="action-panel">
+	<div class="select-action">
+		<button class="fill-button" disabled="true">x</button>
+		<div class="button-container">
+			<button class="action-button">SELL</button>
+        </div>
+        <button class="x-button"></button>
+
+	</div>
+	<div class="action-body">
+			<div>
+				<div class="stock-panel">
+
+					<img class="icon" src="assets/img/icons/{{stock.symbol}}.png">
+					<div>
+						<span class="action-text">{{stock.symbol}}   </span>
+						 <span class="stock-name">{{stock.name}}</span>
+						<br>
+						<span class="stock-price">Price : {{stock.Close}} USD  </span>
+					</div>
+				
+					
+				</div>
+				
+			</div>
+			
+			<div>
+				<span>QUANTITY  : </span>
+				<button class="label-button" disabled="true" >{{max.toFixed(4)}} </button>
+		</div>
+	</div>`
+    
+    <div class="action-body-center" >
+		<span class="stock-price">UNIT</span>
+</div>
+	<div class="action-body-center" >
+		<button class="label-button-pm" (click)="minus()" >-</button>
+		<input type="number"  (change)="refreshunit()" [(ngModel)] ='unit' class="label-button-amount" type="text" name="" >
+		<button class="label-button-pm" (click)="plus()">+</button>
+    </div>
+    
+	<div class="action-body-center" >
+			<span class="stock-price">AMOUNT (USD)</span>
+	</div>
+		
+	<div class="action-body-center" >
+		<input type="number"  disabled="true" [(ngModel)] ='amount' class="label-button-amount" type="text" name="" >
+	</div>
+	
+
+	
+
+	<div class="action-body-center">
+			
+			<button class="label-button-blue"  (click)="makeAction()">Make Action</button>	
+	</div>
+
+</div>
+<br>

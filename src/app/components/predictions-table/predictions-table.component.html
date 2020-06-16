@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="panel panel-primary">
+      <div class="panel-heading">Predictions</div>
+      <div class="panel-body">
+          <table class="table table-striped">
+
+        <tr>
+            <th>Date</th>
+            <th>Value</th>
+          </tr>
+          <tr *ngFor="let k of values">
+            <td>{{k.date | date: 'dd/MM/yyyy'}}</td>
+            <td>{{k.values.toFixed(2) }} usd</td>
+          </tr>
+        </table>
+    </div>
+</div>
+</div>

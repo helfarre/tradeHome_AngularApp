@@ -1,0 +1,28 @@
+
+<div>
+  <br>
+
+    <form  #stockform ="ngForm" (change) = "onClickSubmit(stockform.value)">
+        
+          <label>Date Window :</label>
+
+          <select name="resolution"  [ngModel]="resolution" >
+            <option value="d" >Per Day</option>
+            <option value="w">Per Week</option>
+            <option value="m">Per Month</option>
+          </select>
+          <label>StartDate:</label>
+          <input type="date" name="startdate" [ngModel] ="startdate | date:'yyyy-MM-dd'"  min="{{mindate | date:'yyyy-MM-dd'}}" max="{{maxdate | date:'yyyy-MM-dd'}}" >
+          <label>EndDate :</label>
+          <input name="endDate" type="date" [ngModel]="endDate | date:'yyyy-MM-dd'"  min="{{mindate | date:'yyyy-MM-dd'}}" max="{{maxdate | date:'yyyy-MM-dd'}}">
+    </form>
+    <div  style="display: block;">
+        <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+        ></canvas>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.Money{
+    text-align: center;
+    border: 2px solid blue;
+    width: 500px;
+    height: 70px;
+    margin-left: 30%;
+    
+    margin-top: 5%;
+}
+
+p{
+    color : red;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Purchase List</div>
+        <div class="panel-body">
+            <table *ngIf="purchases" class="table table-striped">
+                <tr>
+                    <th>Stock Name</th>
+                    <th>Symbol</th>
+                    <th>Category name</th>
+                    <th>Stock price</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr class="test"  *ngFor="let p of purchases | paginate:{id : 'listing_pagination1',
+                itemsPerPage: 10,
+                currentPage: page,
+                totalItems: totalRecords}"> 
+                    <td>{{p.stock.name}}</td>
+                    <td>{{p.stock.symbol}}</td>
+                    <td>{{p.stock.category.name}}</td> 
+                    <td>{{p.stockPrice}}</td> 
+                    <td>{{p.quantity}}</td>
+                    
+                </tr>
+            </table>
+        </div>
+        <pagination-controls id="listing_pagination1" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+
+    </div>
+</div>

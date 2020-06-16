@@ -1,0 +1,39 @@
+
+	<div class="Thumbnail-stock  ">
+		<div class="stock-header"> 
+		   
+			<img src="assets/img/icons/{{stock.symbol}}.png" class="stock-icon">
+				<div class="stock-names">
+					<span class="short-name">{{stock.symbol}}</span>
+					<br>
+					<span class="full-name">{{stock.name}}</span>
+				</div>
+		</div>
+		
+		<div class="change"> 
+			<span class="full-name">CHANGE(1D)</span>
+		</div>
+		
+		<div class="buy-sell-box">
+			<div class="smallbox">
+				<div class="smallbox-title">
+					<span>HIGH</span>
+				</div>
+				
+				<div class="smallbox-price">
+					 <span>{{stock.High}}</span>
+				</div>
+			</div>
+			
+			<div class="smallbox">
+				<div class="smallbox-title">
+					<span>LOW</span>
+				</div>
+				<div class="smallbox-price">
+					 <span>{{stock.Low}}</span> 
+				</div>
+			</div>
+	   
+		</div>
+	
+	</div>

@@ -1,0 +1,123 @@
+.cadre{
+    display: flex;
+    border: 1px solid #6A6A6A;
+    margin-left: 200px;
+    margin-right: 200px;
+  
+    padding : 10px;
+}
+.symbol{
+  
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -.25px;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+.titre{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -.25px;
+    vertical-align: middle;
+    color: #777;
+    margin-left: 10px;
+    letter-spacing: -.50px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.alligner-title{
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.change{
+    color: #d0021b;
+    font-family: DINOT,'Open Sans',Arial;
+    direction: ltr;
+    font-size: 20px;
+    margin: 0 5px;
+    position: relative;
+    font-weight: 300;
+    letter-spacing: -.25px;
+
+}
+p{
+    margin: 0px;
+}
+.price{
+    font-family: DINOT,'Open Sans',Arial;
+    color: green;
+    direction: ltr;
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 36px;
+    letter-spacing: -1px;
+}
+.alligner-all{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.logo{
+   
+    height: 75px;
+    width: 75px;
+    position: relative;
+    -webkit-box-flex: 0;
+    flex: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.titre ::before{
+    content: '|';
+    padding: 0 5px;
+    display: inline-block;
+}
+.allign-button{
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    text-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+button{
+
+    color: #fff;
+    line-height: 50px;
+    font-size: 24px;
+    min-width: 135px;
+    padding: 0 10px;
+    border-radius: 4px;
+    font-weight: 400;
+    text-decoration: unset;
+    height: auto;
+    cursor: pointer;
+border: none;    background-color: #2999f5;
+   
+}
+.text {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin-top: 10px;
+}

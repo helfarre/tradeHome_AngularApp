@@ -1,0 +1,80 @@
+.Thumbnail-stock
+{
+	margin-right: 18px;
+	margin-left: 18px;
+	width: 250px;
+	margin-bottom: 20px;
+	height: 250px;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  	 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px
+}
+.stock-header{
+	padding : 5%;
+	display: flex;
+
+}
+.stock-names{
+padding-top: 5px;
+}
+.stock-icon{
+	height: 50px;
+	width: 50px;
+	margin-right: 40px;
+	
+}
+.short-name{
+
+  display: inline-block;
+  vertical-align: middle;
+  font-family: sans-serif;
+color: black
+}
+.full-name{
+	display: inline-block;
+  vertical-align: middle;
+	font-family: sans-serif;
+color: grey;
+}
+.change{
+		padding : 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.down{
+	color: red;
+}
+.smallbox{
+
+	width: 45%
+}
+.buy-sell-box{
+	padding : 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.smallbox-title{
+	line-height: 30px;
+	font-weight: 900;
+	border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+
+	  font-family: sans-serif;
+
+	padding-left: 10px;
+	color :white;
+	background-color: grey;
+}
+.smallbox-price
+{
+	border: 1px solid grey;
+	font-family: sans-serif;
+	line-height: 40px;
+    padding: 5px;
+    text-align: right;
+}
+body
+{
+	display: flex;
+
+}

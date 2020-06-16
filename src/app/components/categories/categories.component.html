@@ -1,0 +1,8 @@
+
+
+
+<div *ngFor="let c of categories">
+   <li style="list-style-type: none;" 
+   [routerLink]="[c.name]"><button mat-raised-button >{{c.name}}</button></li> 
+</div>
+<router-outlet></router-outlet>
