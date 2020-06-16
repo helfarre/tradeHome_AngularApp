@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { LoginCredentils } from '../models/LoginCredentials.Model';
-import { Observable } from 'rxjs';
-import { refreshtoken } from '../models/RefreshTokenRequest.model';
-import { tap } from 'rxjs/operators';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { User } from '../models/User.Model';
+import { Observable } from "rxjs";
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Router } from "@angular/router";
+import { LoginCredentils } from "../models/LoginCredentials.Model";
+import { refreshtoken } from "../models/RefreshTokenRequest.model";
+import { tap } from "rxjs/operators";
+import { User } from "../models/User.Model";
+
 
 @Injectable({
   providedIn: 'root'
@@ -53,8 +53,8 @@ Logout()
   //this.router.navigate(['login']);
 }
 isLoggedIn() {
-  // create an instance of JwtHelper class.
-  let jwtHelper = new JwtHelperService();
+
+
   // get the token from the localStorage as we have to work on this token.
   let token = localStorage.getItem('token');
   // check whether if token have something or it is null.
