@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../Services/authentication.service';
 import { Router } from '@angular/router';
 import { DashboardService } from 'src/app/services/dashboard.service';
 import { Operation } from 'src/app/models/Operation.Model';
+import { AuthService } from 'src/app/Services/auth.service';
 
 
 @Component({
@@ -15,8 +15,7 @@ export class OperationsComponent implements OnInit {
   page;
   totalRecords;
   operations : any;
-  constructor(private _authService : AuthenticationService
-    ,private _router :Router
+  constructor(private _authService : AuthService
     ,private dashService : DashboardService
     ) { }
 

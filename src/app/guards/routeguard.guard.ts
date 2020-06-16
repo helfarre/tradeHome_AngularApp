@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthenticationService } from '../Services/authentication.service';
+import { CanActivate, Router } from '@angular/router';
+import { AuthService } from '../Services/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RouteguardGuard implements CanActivate {
-  constructor(private codeservice:AuthenticationService,private router:Router){}
+  constructor(private codeservice:AuthService,private router:Router){}
 
   canActivate():boolean{
     if((this.codeservice.isLoggedIn())){

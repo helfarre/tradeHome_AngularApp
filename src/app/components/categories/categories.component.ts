@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { MarketService } from 'src/app/services/market.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/models/Purchase.Model';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-categories',
@@ -15,9 +15,9 @@ export class CategoriesComponent implements OnInit {
   categories : Category;
   value : any;
   categorie : string;
-  constructor(private _authService : AuthenticationService,
-    private marketService : MarketService,private _router :Router,
-    private route: ActivatedRoute)  { 
+  constructor(private _authService : AuthService,
+    private marketService : MarketService
+    )  { 
       
     }
     

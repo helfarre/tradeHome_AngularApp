@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Stock } from 'src/app/models/Operation.Model';
-import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { MarketService } from 'src/app/services/market.service';
 import { DatageneratorService } from 'src/app/services/datagenerator.service';
 import { Location } from '@angular/common';
 import { PredictionService } from 'src/app/services/prediction.service';
 import { predictions } from 'src/app/models/Predictions.Model';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-stock-page',
@@ -22,7 +22,7 @@ export class StockPageComponent implements OnInit {
   indicator : number = 1;
   values : Array<predictions>;
   text : string = "SHOW PREDICTIONS";
-  constructor(private _authService : AuthenticationService,
+  constructor(private _authService : AuthService,
     private marketService : MarketService
     ,private _router :Router,
     private dataService : DatageneratorService,

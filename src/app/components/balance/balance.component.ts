@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { DashboardService } from 'src/app/services/dashboard.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-balance',
@@ -11,7 +11,7 @@ export class BalanceComponent implements OnInit {
   isAuthenticated : boolean;
   clientbalance : number;
   firstname : string;
-   constructor( private _authService: AuthenticationService,
+   constructor( private _authService: AuthService,
     private dashService : DashboardService) { }
 
   ngOnInit(): void {

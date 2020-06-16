@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
-import {HttpClient,HttpHeaders} from '@angular/common/http';
- import { LoginCredentils } from '../models/LoginCredentials.Model';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import {JwtHelperService} from '@auth0/angular-jwt';
- import { User } from '../models/User.Model';
+import { LoginCredentils } from '../models/LoginCredentials.Model';
+import { Observable } from 'rxjs';
 import { refreshtoken } from '../models/RefreshTokenRequest.model';
 import { tap } from 'rxjs/operators';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { User } from '../models/User.Model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
-
+export class AuthService {
   constructor(private _http: HttpClient,private router : Router) { }
   baseUrl :string= "https://trade-home-rest-api.herokuapp.com/";
   login(clientDetail : LoginCredentils) : Observable<any>  

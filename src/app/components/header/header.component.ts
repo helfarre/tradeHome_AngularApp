@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { DashboardService } from 'src/app/services/dashboard.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   clientname : string ;
   tradeAuto : boolean;
 
-  constructor(private authService : AuthenticationService,private dashboardServie : DashboardService) { }
+  constructor(private authService : AuthService,private dashboardServie : DashboardService) { }
 
   ngOnInit(): void {
     this.isAuthenticated=this.authService.isLoggedIn();

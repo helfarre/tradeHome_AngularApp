@@ -4,7 +4,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { DatageneratorService } from './datagenerator.service';
 import { Category } from '../models/Purchase.Model';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,5 @@
 import { Component, OnInit, ɵConsole, Input } from '@angular/core';
-import { DatageneratorService } from '../../services/datagenerator.service'
-import { FormsModule } from '@angular/forms';
-
+import { DatageneratorService } from '../../services/datagenerator.service';
 @Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',

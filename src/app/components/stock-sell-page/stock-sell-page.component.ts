@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { MarketService } from 'src/app/services/market.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DatageneratorService } from 'src/app/services/datagenerator.service';
 import { Stock } from 'src/app/models/Operation.Model';
 import { predictions } from 'src/app/models/Predictions.Model';
 import { PredictionService } from 'src/app/services/prediction.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-stock-sell-page',
@@ -23,7 +23,7 @@ export class StockSellPageComponent implements OnInit {
   values : Array<predictions>;
   text : string = "SHOW PREDICTIONS";
 
-  constructor(private _authService : AuthenticationService,
+  constructor(private _authService : AuthService,
     private marketService : MarketService
     ,private _router :Router,
     private dataService : DatageneratorService,

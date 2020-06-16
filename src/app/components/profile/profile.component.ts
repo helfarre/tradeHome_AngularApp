@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/Services/authentication.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-profile',
@@ -12,9 +9,7 @@ export class ProfileComponent implements OnInit {
 
   // client$ : Observable<Client>;
   operations : any
-  constructor(//private _clientService : ClientDataService
-     private _authSerivce : AuthenticationService
-    ,private _router :Router
+  constructor(
     
     ) {
     //  this.operations=[`this.httpClient.get()`]

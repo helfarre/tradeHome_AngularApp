@@ -10,14 +10,13 @@ import {
 } from '@angular/common/http';
 import { map, catchError, finalize, switchMap, filter, take } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../Services/authentication.service';
-import { refreshtoken } from '../models/RefreshTokenRequest.model';
+import { AuthService } from '../Services/auth.service';
 
 @Injectable()
 export class HTTPListener implements HttpInterceptor {
     private isRefreshing = false;
     private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-  constructor(private router : Router,private auth : AuthenticationService) {
+  constructor(private router : Router,private auth : AuthService) {
   }
   
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

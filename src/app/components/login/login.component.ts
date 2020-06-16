@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginCredentils } from 'src/app/models/LoginCredentials.Model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AuthenticationService } from 'src/app/Services/authentication.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import { AuthenticationService } from 'src/app/Services/authentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authenticationService : AuthenticationService, private router : Router) { }
+  constructor(private authenticationService : AuthService, private router : Router) { }
   private client = new LoginCredentils();  
 
   ngOnInit(): void {

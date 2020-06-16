@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from 'src/app/Services/authentication.service';
 import { MarketService } from 'src/app/services/market.service';
 import { Stock } from 'src/app/models/Operation.Model';
-import { Router } from '@angular/router';
 import { DatageneratorService } from 'src/app/services/datagenerator.service';
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
+import { AuthService } from 'src/app/Services/auth.service';
 
 
 
@@ -20,9 +19,9 @@ export class TrademarketComponent implements OnInit {
   stocks : Stock;
   Stocks : Array<Stock> = new Array();
   actualroute: string;
-  constructor(private _authService : AuthenticationService,
+  constructor(private _authService : AuthService,
     private marketService : MarketService
-    ,private _router :Router,
+    ,
     private dataService : DatageneratorService,
     private route: ActivatedRoute,loc: Location) {
       this.route.params.subscribe(params => {

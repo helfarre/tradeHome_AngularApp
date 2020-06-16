@@ -15,7 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HTTPListener } from './Inteceptors/HttpInterceptor2';
 import { Interceptor } from './Inteceptors/HttpInterceptor';
-import { AuthenticationService } from './Services/authentication.service';
+import { AuthService } from './Services/auth.service';
 import { OperationsComponent } from './components/operations/operations.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
 import { BalanceComponent } from './components/balance/balance.component';
@@ -107,7 +107,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     
 
   ],
-  providers: [AuthenticationService,RouteguardGuard,{
+  providers: [AuthService,RouteguardGuard,{
     provide : HTTP_INTERCEPTORS,
     useClass: Interceptor,
     multi : true
