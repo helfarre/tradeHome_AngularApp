@@ -12,7 +12,7 @@ export class OperationsComponent implements OnInit {
   isAuthenticated : boolean;
   page;
   totalRecords;
-  operations : any;
+  operations : Array<any>;
   constructor(private _authService : AuthService
     ,private dashService : DashboardService
     ) { }
@@ -21,8 +21,9 @@ export class OperationsComponent implements OnInit {
     this.isAuthenticated=this._authService.isLoggedIn();
     if(this.isAuthenticated)
     {
-      this.dashService.getAllOperations().subscribe(response=>{
+      this.dashService.getAllOperations().subscribe((response : any)=>{
         this.operations = response;
+        this.operations = this.operations.reverse();
 
         
       });

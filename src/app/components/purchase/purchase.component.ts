@@ -32,6 +32,7 @@ export class PurchaseComponent implements OnInit {
     // {
       this.dashService.getAllPurchases().subscribe(response=>{
         this.purchases = response;
+        this.purchases = this.purchases.reverse();
       });
     }
   // }
