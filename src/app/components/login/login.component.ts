@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
             }  
         },  
         error => {  
-            console.log("Error in authentication");  
+          alert("please register before login Or Invalid combination of Email and password");  
         }  
       );  
   }  

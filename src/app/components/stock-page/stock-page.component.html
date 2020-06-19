@@ -4,13 +4,13 @@
 <app-stock-description [stock]="stock"></app-stock-description>
 <br>
 <div class=" text-center" style="width: 100%; height: 70px; margin-bottom: 10px;">
-    <button (click)="changeindicator(1)"  type="button" class="btn btn-primary btn-lg  mr-1"  style="height: 100%; width: 30%;">STATISTICS</button>
-    <button (click)="changeindicator(0)" type="button" class="btn btn-primary btn-lg mr-1" style="height: 100%; width: 30%;">BUY</button>
-    <button (click)="getPredictions()" type="button" class="btn btn-primary btn-lg mr-1" style="height: 100%; width: 30%;">{{text}}</button>
+    <button (click)="changeindicator(1)"  type="button" class="btn btn-primary btn-lg  mr-1 bt1"  >STATISTICS</button>
+    <button (click)="changeindicator(0)" type="button" class="btn btn-primary btn-lg mr-1 bt2" >BUY</button>
+    <button (click)="getPredictions()" type="button" class="btn btn-primary btn-lg mr-1 bt3">{{text}}</button>
 </div>
 <app-predictions-table *ngIf="indicator==2" [values]="values"></app-predictions-table>
 <app-bar-chart *ngIf="indicator==1" [stock_symbol]="stock_symbol"></app-bar-chart>
 <div>
     <app-stock-buy *ngIf="indicator==0" [stock]="stock"></app-stock-buy>
 </div>
-</div>
+</div> 

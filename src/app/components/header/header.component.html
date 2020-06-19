@@ -1,39 +1,31 @@
- <ul>
+<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light" style=" background: #333;   padding: 0px;margin: 0px;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color:  #333; margin: 0px; padding: 0px;">
+    <ul class="navbar-nav mr-auto" style="width: 100%;" >
   <!-- <li><a href="#news">About</a></li>
   <li><a href="#contact">Contact</a></li> -->
 
-  <li *ngIf="!isAuthenticated" style="float:right"><a class="active" routerLink="/SignUp" >SignUp</a></li> 
-  <li *ngIf="!isAuthenticated" style="float:right"><a class="active" routerLink="/login" >Login</a></li> 
+  <li *ngIf="!isAuthenticated" style="float:right"><a class="active" style=" color: white;" routerLink="/SignUp" >SignUp</a></li> 
+  <li *ngIf="!isAuthenticated" style="float:right"><a class="active" style=" color: white;" routerLink="/login" >Login</a></li> 
 
-  <li  style="float:right"><a class="active" routerLink="" >Home</a></li> 
+  <li  style="float:right"><a class="active" style=" color: white;" routerLink="" >Home</a></li> 
 
-  <li *ngIf="isAuthenticated"  style="float:right"><a class="active" routerLink="" (click)="Logout()" >Logout</a></li>
-  <li *ngIf="isAuthenticated" style="float:right"><a class="active" routerLink="/profile"  >Welcome {{ clientname }}</a></li>
+  <li *ngIf="isAuthenticated"  style="float:right;"><a style="color: white;" class="active" routerLink="" (click)="Logout()" >Logout</a></li>
+  <li *ngIf="isAuthenticated" style="float:right"><a style=" color: white;" class="active" routerLink="/profile"  >Welcome {{ clientname }}</a></li>
   <li *ngIf="isAuthenticated" style="float:right">
     <a  *ngIf="tradeAuto" style="background-color: green; color: white;" class= "active" (click)="switchStatus()">Automated Trading :Enabled</a>
     <a  *ngIf="!tradeAuto" style="background-color: red; color: white;" class= "active" (click)="switchStatus()">Automated Trading : Disabled</a>
 
   </li>
 
-  <li *ngIf="isAuthenticated"><a class= "active" routerLink="/profile">Dashboard</a></li>
-  <li *ngIf="isAuthenticated"><a class= "active" routerLink="/Categories/Tech">TradeMarket</a></li>
-  <li *ngIf="isAuthenticated"><a class= "active" routerLink="/sell">Sell Stocks</a></li>
+  <li *ngIf="isAuthenticated"><a style=" color: white;" class= "active" routerLink="/profile">Dashboard</a></li>
+  <li *ngIf="isAuthenticated"><a style=" color: white;" class= "active" routerLink="/Categories/Tech">TradeMarket</a></li>
+  <li *ngIf="isAuthenticated"><a style=" color: white;" class= "active" routerLink="/sell">Sell Stocks</a></li>
 
 
 </ul>
-
- <!-- <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" >WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li *ngIf="!isAuthenticated" ><a class="active" routerLink="/login">Login</a></li>
-      <li *ngIf="isAuthenticated" ><a class="active" routerLink="" (click)="Logout()" >Logout</a></li>
-      <li *ngIf="isAuthenticated"><a routerLink="/profile">Dashboard</a></li>
-      <li *ngIf="isAuthenticated"><a>TradeMarket</a></li>
-    </ul>
-  </div>
-</nav>  -->
-
-
+</div>
+</nav>

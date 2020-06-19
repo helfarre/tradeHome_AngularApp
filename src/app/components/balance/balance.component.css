@@ -3,11 +3,17 @@
     border: 2px solid blue;
     width: 500px;
     height: 70px;
-    margin-left: 30%;
-    
     margin-top: 5%;
 }
 
 p{
     color : red;
 }
+@media only screen and (max-width: 600px) {
+    .Money{
+        width: fit-content;
+        padding: 20px;
+        height: 100px;
+
+    }
+    }

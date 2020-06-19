@@ -12,10 +12,18 @@ body{
 	padding-top: 10%;
 	margin-left: 40%;
 }
+@media only screen and (max-width: 600px) {
+	.Textdiv{
+
+		padding-top: 10%;
+		margin-left: 5%;
+	}
+  }
 .h1homebold{
 color: white;
 font-size : 40px;
 font-family: sans-serif;
+line-height: normal;
 font-weight: 100;
 }
 .h1homeThin{
@@ -35,7 +43,7 @@ font-weight: 100;
 #detailbutton{
 	margin-top : 50px;
 }
-
+ 
 .title-container{
 	margin-bottom: 50px;
 }

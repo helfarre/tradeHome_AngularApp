@@ -18,7 +18,29 @@ ul {
     text-decoration: none;
   }
   
+  .navbar-collapse.collapse.in {
+    display: block!important;
+  }
+  .active{
+    color: white;
+  }
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
+    color: white;;
   }
+  li a:active {
+    background-color: #111;
+    color: white;;
+  }
+
+  @media only screen and (max-width: 600px) {
+    ul{
+      display: flex;
+    }
+}
+@media only screen and (min-width: 600px) {
+  ul{
+    display: inline;
+  }
+}

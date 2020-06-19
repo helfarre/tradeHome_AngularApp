@@ -36,7 +36,7 @@ export class BarChartComponent implements OnInit {
     }
        this.barChartLabels=data['Date'];
        this.barChartData[0].label=this.stock_symbol;
-       this.barChartData[0].data=data['Close'].flat();
+       this.barChartData[0].data=flatt(data['Close']);
 
     });
   }
@@ -51,4 +51,19 @@ this.ngOnInit();
  }
   
 
+}
+function flatt(input, depth = 1, stack = [])
+{
+    for (let item of input)
+    {
+        if (item instanceof Array && depth > 0)
+        {
+            flatt(item, depth - 1, stack);
+        }
+        else {
+            stack.push(item);
+        }
+    }
+
+    return stack;
 }
