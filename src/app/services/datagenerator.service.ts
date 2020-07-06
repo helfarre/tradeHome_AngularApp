@@ -30,7 +30,7 @@ export class DatageneratorService {
     let finishingDate=new Date();
     let finish= (finishingDate.getTime()/1000).toFixed(0);
     let startingdate=new Date();
-    startingdate.setDate(startingdate.getDate() - 2);
+    startingdate.setDate(startingdate.getDate() - 4);
     let Start= (startingdate.getTime()/1000).toFixed(0);
    // console.log("start"+Start+"finish"+finish);
     this.httpClient.get(`https://finnhub.io/api/v1/stock/candle?symbol=${stock.symbol}&resolution=D&from=${Start}&to=${finish}&token=${this.API_KEY}`).subscribe(
@@ -51,7 +51,7 @@ export class DatageneratorService {
     let finishingDate=new Date();
     let finish= (finishingDate.getTime()/1000).toFixed(0);
     let startingdate=new Date();
-    startingdate.setDate(startingdate.getDate() - 2);
+    startingdate.setDate(startingdate.getDate() - 4);
     let Start= (startingdate.getTime()/1000).toFixed(0);
 
 
